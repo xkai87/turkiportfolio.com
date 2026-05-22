@@ -15,8 +15,8 @@
       font-family:Arial, sans-serif;
     }
 
-    
-body{
+
+    body{
   background:
   radial-gradient(circle at top,
   rgba(250,204,21,0.08),
@@ -27,8 +27,9 @@ body{
   overflow-x:hidden;
 
   min-height:100vh;
+}
 
-  .hero{
+    .hero{
   height:100vh;
   display:flex;
   justify-content:center;
@@ -38,8 +39,8 @@ body{
   position:relative;
 
   animation:fadeIn 1.5s ease;
-}
-
+} 
+    
     .glow{
       position:absolute;
       width:350px;
@@ -138,7 +139,28 @@ body{
     opacity:1;
     transform:translateY(0);
   }
+.grid{
+  position:absolute;
+  width:100%;
+  height:100%;
 
+  background-image:
+  linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+  linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+
+  background-size:50px 50px;
+
+  z-index:0;
+}
+
+.card{
+  flex-direction:column;
+  gap:10px;
+}
+
+.card span{
+  font-size:35px;
+} 
 }
   </style>
 </head>
@@ -147,37 +169,39 @@ body{
 
   <section class="hero">
 
-    <div class="glow"></div>
+  <div class="grid"></div>
+  <div class="glow"></div>
 
-    <h1>
-      Turki <span class="yellow">Portfolio</span>
-    </h1>
+  <h1>
+    Turki <span class="yellow">Portfolio</span>
+  </h1>
 
-    <p class="subtitle">
-      Academic • Projects • Future
-    </p>
+  <p class="subtitle">
+    Academic • Projects • Future
+  </p>
 
-    <div class="cards">
+  <div class="cards">
 
-      <div class="card">
-        About Me
-      </div>
-
-      <div class="card">
-        Certificates
-      </div>
-
-      <div class="card">
-        My Letters
-      </div>
-
-      <div class="card">
-        Projects
-      </div>
-
+    <div class="card">
+      <span>👨‍💻</span>
+      <p>About Me</p>
     </div>
 
-  </section>
+    <div class="card">
+      <span>📜</span>
+      <p>Certificates</p>
+    </div>
 
-</body>
-</html>
+    <div class="card">
+      <span>📝</span>
+      <p>My Letters</p>
+    </div>
+
+    <div class="card">
+      <span>🚀</span>
+      <p>Projects</p>
+    </div>
+
+  </div>
+
+</section>
